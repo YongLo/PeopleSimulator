@@ -12,12 +12,27 @@ class Society{
 	Society(int numPeople){
 		population = numPeople;
 		String fullName;
+        int eduLevel;
+        int peopleAge;
 		for(int i = 0; i < numPeople; i++){
+            peopleAge = (int)(Math.random()*100) + 1;
+			if(peopleAge >= 5 && peopleAge <= 17){
+                eduLevel = peopleAge - 5;
+            }
+            else if (peopleAge >= 18){
+                System.out.println(peopleAge);
+                eduLevel = (int)(Math.random()*16);
+            }
+            else {
+                 eduLevel = 0;
+            }
 			fullName = firstNames[(int)(Math.random()*firstNames.length)] + " " + lastNames[(int)(Math.random()*lastNames.length)];
-			people.add(new Person((int)(Math.random()*100),fullName));
-		}	
+			people.add(new Person(peopleAge,fullName,eduLevel,(int)(Math.random()*100)));
+		}
 	}
 
+// public void applyColleges(){
+//     for(int i = 0; i < peopleTown.get(i).)
 
+// }
 }
-
