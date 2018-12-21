@@ -32,7 +32,10 @@ class Society{
 	}
 
 // public void applyColleges(){
-//     for(int i = 0; i < peopleTown.get(i).)
+//     for(int i = 0; i < people.size();i++){
+//        if(people.get(i).getWork() <= 60){
 
-// }
+//        }
+//     }
+}
 }
