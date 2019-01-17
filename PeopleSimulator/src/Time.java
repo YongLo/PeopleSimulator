@@ -1,5 +1,8 @@
+
+
 class Time {
-    
+
+
  private int month;
  private int day;
  private int year;
@@ -42,6 +45,7 @@ class Time {
      day = 1;
  }
 
+
  public int getDay()
  {
      return day;
@@ -66,5 +70,6 @@ class Time {
  {
      return (month+"/"+day);
  }
+
 }
 
