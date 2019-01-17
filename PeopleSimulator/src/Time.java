@@ -1,6 +1,5 @@
 class Time {
-
-
+    
  private int month;
  private int day;
  private int year;

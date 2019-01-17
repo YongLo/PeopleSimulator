@@ -21,8 +21,8 @@ class Person {
 		} else {
 			return false;
 		}
-
 	}
+
     public void inSchool(boolean enrolling){
         enrolled = enrolling;
     }
@@ -30,6 +30,7 @@ class Person {
     public void upAgrade(){
         edu++;
     }
+
 	public String getName() {
 		return name;
 	}
@@ -43,14 +44,17 @@ class Person {
 	}
 
     public String getGender(){
-    return gender;
+        return gender;
     }
+
    public int getEdu() {
 		return edu;
 	}
+
     public boolean getEnroll(){
         return enrolled;
     }
+    
     public void setGender(String gender){
         this.gender = gender;
     }

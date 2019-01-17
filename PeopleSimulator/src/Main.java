@@ -6,7 +6,6 @@ class Main {
       int yearPass = 1;
       for(int i = 0; i < 1825; i++) {
         peopleTown.cycleDay();
-
        if(i == (365 * yearPass) ){
            System.out.println("-Year:" + yearPass);
           for(int p = 0; p < peopleTown.people.size(); p++){
