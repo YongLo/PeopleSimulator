@@ -65,6 +65,7 @@ class Society{
         //Grade Up for student between the age of 5 to 17
             else if(people.get(g).getEnroll() == true && people.get(g).getAge() <= 17){
                 people.get(g).upAgrade();
+
             }
         //Graduated High school, 50 chance to of being accepted to college
             else if(people.get(g).getAge() == 18) {
@@ -82,6 +83,10 @@ class Society{
                 if(people.get(g).getEdu() == 16){
                      people.get(g).inSchool(false);
                 }
+            }
+        //drop out
+            else if(people.get(g).getAge() <= 24 ){
+                
             }
         }
 
