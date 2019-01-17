@@ -49,7 +49,6 @@ List<Place> places = new ArrayList<Place>();
         }
     }
 
-
     public void cycleDay()
     {
         time.incrementTime();
@@ -60,6 +59,7 @@ List<Place> places = new ArrayList<Place>();
           gradeUp();
         }
     }
+
     public void gradeUp(){
         for(int g = 0; g <= people.size()-1 ;g++){
         //Age Up (just for now, until birthday)
@@ -95,7 +95,6 @@ List<Place> places = new ArrayList<Place>();
 
             }
         }
-
     }
 
     public Person getOldestPerson () {

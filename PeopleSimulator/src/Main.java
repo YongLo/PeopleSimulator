@@ -6,7 +6,7 @@ public static void main(String[] args) {
       int yearPass = 1;
       for(int i = 0; i < 1825; i++) {
         peopleTown.cycleDay();
-       if(i == (365 * yearPass) ){
+        if(i == (365 * yearPass) ){
            System.out.println("-Year:" + yearPass);
           for(int p = 0; p < peopleTown.people.size(); p++){
             if(peopleTown.people.get(p).getEnroll() == true){
@@ -14,8 +14,8 @@ public static void main(String[] args) {
             }
           }
           yearPass++;
-       }
-     }
+        }
+      }
      for(Person individual : peopleTown.people){
           //This is a test of the people who got married
           if(individual.getSpouse() != null){

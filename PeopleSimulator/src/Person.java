@@ -28,8 +28,6 @@ class Person {
         this.enrolled = enrolled;
         this.place = place;
         this.spouse = null;
-           this.place = place;
-        this.spouse = null;
         for(int i = 0; i < 10; i++){
             haves.add((int)(Math.random()*10));
             wants.add((int)(Math.random()*10));
