@@ -1,16 +1,21 @@
-
 class Main {
-	// I'll be using this main method for testing
+
 	public static void main(String[] args) {
 
 		Society peopleTown = new Society(100);
+      int yearPass = 1;
+      for(int i = 0; i < 1825; i++) {
+        peopleTown.cycleDay();
 
-        //gets the name of the person in the people arrayList at position 8000
-        System.out.println(peopleTown.people.get(80).getName());
-        for(int i = 0; i < peopleTown.people.size(); i++){
-
-			System.out.println(i + " " + peopleTown.people.get(i).getName() + " age = "+ peopleTown.people.get(i).getAge() + " Edu " + peopleTown.people.get(i).getEdu() + " Hardwork " + peopleTown.people.get(i).getWork());
-        }
+       if(i == (365 * yearPass) ){
+           System.out.println("-Year:" + yearPass);
+          for(int p = 0; p < peopleTown.people.size(); p++){
+            if(peopleTown.people.get(p).getEnroll() == true){
+              System.out.println(peopleTown.people.get(p).getName() + " on grade " + peopleTown.people.get(p).getEdu() );
+            }
+          }
+          yearPass++;
+       }
+     }
 	}
-
 }

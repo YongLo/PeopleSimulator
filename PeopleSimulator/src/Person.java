@@ -1,20 +1,18 @@
 class Person {
 	public int age;
 	private String name;
+    private int birthday;
+    private String gender;
     public int edu;
-    public int work;
-	public Person(int age, String name,int edu, int work) {
+    public boolean enrolled;
+
+	public Person(int age, String name,String gender,int birthdate, int edu,boolean enrolled) {
 		this.name = name;
 		this.age = age;
+        this.birthday = birthdate;
+        this.gender = gender;
         this.edu = edu;
-        this.work = work;
-	}
-
-	public Person() {
-		this.name = "Brad";
-		this.age = 37;
-        this.edu = 15;
-        this.work = 99;
+        this.enrolled = enrolled;
 	}
 
 	public boolean olderThan(int otherAge) {
@@ -25,7 +23,13 @@ class Person {
 		}
 
 	}
+    public void inSchool(boolean enrolling){
+        enrolled = enrolling;
+    }
 
+    public void upAgrade(){
+        edu++;
+    }
 	public String getName() {
 		return name;
 	}
@@ -34,16 +38,20 @@ class Person {
 		return age;
 	}
 
-    public int getEdu() {
-		return edu;
-	}
-     public int getWork() {
-		return work;
-	}
-
-
 	public void hadBirthday() {
 		age++;
 	}
 
+    public String getGender(){
+    return gender;
+    }
+   public int getEdu() {
+		return edu;
+	}
+    public boolean getEnroll(){
+        return enrolled;
+    }
+    public void setGender(String gender){
+        this.gender = gender;
+    }
 }
