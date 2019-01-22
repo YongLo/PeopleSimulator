@@ -30,7 +30,8 @@ List<Place> places = new ArrayList<Place>();
            else{
                gender = "male";
            }
-           peopleAge = (int)(Math.random()*100);
+//remember change back to max age of 100
+           peopleAge = (int)(Math.random()*24);
            //education
             if(peopleAge >= 5 && peopleAge <= 17){
                eduLevel = peopleAge - 5;
@@ -55,6 +56,7 @@ List<Place> places = new ArrayList<Place>();
         // hey folks put your daily methods in here
         findTheLove(people.get((int)(Math.random() * population)), people.get((int)(Math.random() * population)));
 
+
         if(time.dayMonth().equals("1/1")){
           gradeUp();
         }
@@ -71,12 +73,18 @@ List<Place> places = new ArrayList<Place>();
         //Grade Up for student between the age of 5 to 17
             else if(people.get(g).getEnroll() == true && people.get(g).getAge() <= 17){
                 people.get(g).upAgrade();
-
+                //drop for high school base on gender
+                    if(people.get(g).getGender() == "female" && (int)(Math.random()*100) <= 1 && people.get(g).getEdu() >= 9){
+                        people.get(g).inSchool(false);
+                    }
+                    else if(people.get(g).getGender() == "male" && (int)(Math.random()*100) <= 2 && people.get(g).getEdu() >= 9) {
+                        people.get(g).inSchool(false);
+                    }
             }
         //Graduated High school, 50 chance to of being accepted to college
             else if(people.get(g).getAge() == 18) {
                  //60 percent to be accepted to college
-                 if((int)(Math.random()*100) >= 30){
+                 if((int)(Math.random()*100) <= 70){
                      people.get(g).upAgrade();
                  }
                  else{
@@ -88,11 +96,13 @@ List<Place> places = new ArrayList<Place>();
                      people.get(g).upAgrade();
                 if(people.get(g).getEdu() == 16){
                      people.get(g).inSchool(false);
+                     
                 }
-            }
-        //drop out
-            else if(people.get(g).getAge() <= 24 ){
+                // drop out for college
+                if(people.get(g).getEnroll() == true && (int)(Math.random()*100) <= 30){
+                    people.get(g).inSchool(false);
 
+                }
             }
         }
     }
